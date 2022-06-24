@@ -5,6 +5,7 @@ metadata:
   labels:
     app: kostasapp1
   name: kostasapp1
+  namespace: kostas-project
 spec:
   replicas: 1
   selector:
