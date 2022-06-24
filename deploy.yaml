@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: aa
+  name: aa
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: aa
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: aa
+    spec:
+      containers:
+      - image: kotsis/kostasapp:v1
+        name: kostasapp
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
