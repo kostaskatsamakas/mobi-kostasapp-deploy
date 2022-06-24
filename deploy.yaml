@@ -25,3 +25,26 @@ spec:
         - containerPort: 80
         resources: {}
 status: {}
+
+## adding service with NodePort
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: kostassvc1
+  name: kostassvc1
+  namespace: kostas-project
+spec:
+  ports:
+  - name: 1234-80
+    port: 1234
+    protocol: TCP
+    targetPort: 80
+  selector: # need to match label of pod
+    app: kostasapp1
+  type: NodePort
+status:
+  loadBalancer: {}
