@@ -26,8 +26,8 @@ spec:
         resources: {}
         imagePullPolicy: Always
         env:
-          name: deploy
-          value: app2
+         - name: deploy
+           value: app2
 status: {}
 
 ## adding service with NodePort
