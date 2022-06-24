@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   creationTimestamp: null
   labels:
-    app: aa
-  name: aa
+    app: kostasapp1
+  name: kostasapp1
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: aa
+      app: kostasapp1
   strategy: {}
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: aa
+        app: kostasapp1
     spec:
       containers:
       - image: kotsis/kostasapp:v1
